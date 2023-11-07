@@ -3,9 +3,8 @@ const db = require("../config/db")
 
 const User = db.define("users", {
   id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     primaryKey: true,
-    autoIncrement: true,
   },
   name: {
     type: DataTypes.STRING,
@@ -30,7 +29,5 @@ const User = db.define("users", {
 })
 
 User.sync()
-
-
 
 module.exports = User
