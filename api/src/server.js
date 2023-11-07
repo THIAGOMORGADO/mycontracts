@@ -17,7 +17,9 @@ app.post("/accounts", UserController.create)
 
 // Routes is contracts
 app.get("/contracts", ContractsController.show)
+app.get("/contracts/:id", ContractsController.index)
 app.post("/contracts", ContractsController.create)
+app.delete("/contracts/:id", ContractsController.deleted)
 
 app.listen(PORT, () => {
   console.log("listening on port", PORT)
