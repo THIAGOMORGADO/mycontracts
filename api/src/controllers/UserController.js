@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt")
 const User = require("../models/User")
+const { v4: uuidv4 } = require("uuid")
 
 const UserControllers = {
   async index(req, res) {
@@ -28,10 +29,12 @@ const UserControllers = {
     if (!Email_exists) {
       const passwordHash = await bcrypt.hash(password, 10)
       const user = await User.create({
+        id: uuidv4(),
         name,
         email,
         password: passwordHash,
       })
+      console.log(user)
       return res
         .status(200)
         .json({ message: "account created successfully", user })
@@ -64,10 +67,6 @@ const UserControllers = {
         message: "user not found",
       })
     }
-
-    return res.status(201).json({
-      message: "user deleted!",
-    })
   },
 }
 module.exports = UserControllers
