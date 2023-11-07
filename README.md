@@ -24,18 +24,19 @@ _Comando para pasta node _
 
 ## Instruçoes para rodar aplicação e ambiente de desevolvimento (React/ web)
 
-_Comando para pasta node _
+_Comando para pasta Web _
 
 ###### acessar a pasta web e instalar as dependecias
 
 1. yarn ou npm
 2. yarn install
 3. yarn dev
-----------
+
+---
 
 ## Instruçoes para rodar aplicação e ambiente de desevolvimento (React Native/ Mobile app)
 
-_Comando para pasta node_
+_Comando para pasta Mobile_
 
 ###### acessar a pasta mobile e instalar as dependecias
 
