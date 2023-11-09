@@ -3,7 +3,8 @@ const cors = require("cors")
 
 const UserController = require("./controllers/UserController")
 const ContractsController = require("./controllers/ContractsController")
-const ClientsController = require("./controllers/ClientsController")
+const clientsControllers = require("./controllers/ClientsControllers")
+const CompaniesController = require("./controllers/CompaniesControllers")
 
 const db = require("./config/db")
 
@@ -25,8 +26,11 @@ app.delete("/contracts/:id", ContractsController.deleted)
 
 // Routes is Clients
 
-app.get("/users", ClientsController.)
+app.get("/users", clientsControllers.index)
 
+// Routes is Companies
+
+app.get("/companies", CompaniesController.index)
 
 app.listen(PORT, () => {
   console.log("listening on port", PORT)
