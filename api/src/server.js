@@ -26,8 +26,9 @@ app.delete("/contracts/:id", ContractsController.deleted)
 
 // Routes is Clients
 
-app.get("/users", clientsControllers.index)
-
+app.get("/users/:id", clientsControllers.index)
+app.get("/users", clientsControllers.show)
+app.post("/users", clientsControllers.create)
 // Routes is Companies
 
 app.get("/companies", CompaniesController.index)

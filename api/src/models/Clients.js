@@ -22,7 +22,7 @@ const Clients = db.define("clients", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  naturalidae: {
+  naturalidade: {
     type: DataTypes.STRING,
     allowNull: false,
   },
