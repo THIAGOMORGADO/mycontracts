@@ -31,7 +31,8 @@ app.get("/users", clientsControllers.show)
 app.post("/users", clientsControllers.create)
 // Routes is Companies
 
-app.get("/companies", CompaniesController.index)
+app.get("/companies", CompaniesController.show)
+app.post("/companies", CompaniesController.create)
 
 app.listen(PORT, () => {
   console.log("listening on port", PORT)
