@@ -25,6 +25,6 @@ Clients.hasMany(Companies) // Clientes tem muitos Companies
 Companies.belongsTo(Clients) // contatrato pertence  a um user
 
 
-Companies.sync({ alter: true })
+// Companies.sync({ alter: true })
 
 module.exports = Companies

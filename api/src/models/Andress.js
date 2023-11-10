@@ -1,44 +1,39 @@
 const { DataTypes } = require("sequelize")
-
 const db = require("../config/db")
+const Companies = require("../models/Companies")
 
-const Clients = db.define("clients", {
+const Andress = db.define("andress", {
   id: {
     type: DataTypes.STRING,
     primaryKey: true,
   },
-  name: {
+  CEP: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  email: {
+  longadouro: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  cpf: {
+  numero: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  rg: {
+  bairro: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  naturalidade: {
+  cidade: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  sexo: {
+  estado: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  estadoCivil: {
+  cidade: {
     type: DataTypes.STRING,
     allowNull: false,
-  },
-  status: {
-    type: DataTypes.BOOLEAN,
-    allowNull: false,
-    defaultValue: false,
   },
   createdAt: {
     type: DataTypes.DATE,
@@ -50,6 +45,8 @@ const Clients = db.define("clients", {
   },
 })
 
-// Clients.sync({ alter: true })
+Andress.belongsTo(Companies)
 
-module.exports = Clients
+// Andress.sync({ alter: true })
+
+module.exports = Andress

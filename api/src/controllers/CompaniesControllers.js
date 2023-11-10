@@ -3,7 +3,15 @@ const Companies = require("../models/Companies")
 const { v4: uuidv4 } = require("uuid")
 
 const CompaniesControllers = {
-  async index(req, res) {},
+  async index(req, res) {
+    const { id } = req.params
+    const companies = await Companies.findByPk(id)
+
+    if (companies) {
+      return res.json(companies)
+    }
+    return res.json({ message: "user not found" })
+  },
 
   async show(req, res) {
     const newCompanies = await Companies.findAll()

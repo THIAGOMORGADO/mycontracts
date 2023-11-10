@@ -5,6 +5,7 @@ const UserController = require("./controllers/UserController")
 const ContractsController = require("./controllers/ContractsController")
 const clientsControllers = require("./controllers/ClientsControllers")
 const CompaniesController = require("./controllers/CompaniesControllers")
+const AndressController = require("./controllers/AndressControllers")
 
 const db = require("./config/db")
 
@@ -31,8 +32,12 @@ app.get("/users", clientsControllers.show)
 app.post("/users", clientsControllers.create)
 // Routes is Companies
 
+app.get("/companies/:id", CompaniesController.index)
 app.get("/companies", CompaniesController.show)
 app.post("/companies", CompaniesController.create)
+
+// Routes id Andress
+app.get("/andress", AndressController.index)
 
 app.listen(PORT, () => {
   console.log("listening on port", PORT)

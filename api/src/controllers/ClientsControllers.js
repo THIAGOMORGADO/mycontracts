@@ -9,6 +9,7 @@ const clientsControllers = {
     if (clientes) {
       return res.json(clientes)
     }
+    console.log(clientes)
     return res.json({ message: "clientes not found" })
   },
 
