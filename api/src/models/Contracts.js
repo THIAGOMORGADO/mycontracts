@@ -16,6 +16,6 @@ const contracts = db.define("contracts", {
 user.hasMany(contracts) // usuario tem muitos contratos
 contracts.belongsTo(user) // contatrato pertence  a um user
 //eu fiz isso ^^^^^^
-// contracts.sync({ alter: true })
+contracts.sync({ alter: true })
 
 module.exports = contracts

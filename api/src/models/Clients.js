@@ -50,6 +50,6 @@ const Clients = db.define("clients", {
   },
 })
 
-// Clients.sync({ alter: true })
+Clients.sync({ alter: true })
 
 module.exports = Clients
