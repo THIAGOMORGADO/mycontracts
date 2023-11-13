@@ -15,6 +15,10 @@ const Andress = db.define("andress", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  complemento: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   numero: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -47,6 +51,6 @@ const Andress = db.define("andress", {
 
 Andress.belongsTo(Companies)
 
-// Andress.sync({ alter: true })
+Andress.sync({ alter: true })
 
 module.exports = Andress
